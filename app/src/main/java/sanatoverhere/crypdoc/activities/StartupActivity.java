@@ -53,21 +53,15 @@ public class StartupActivity extends AppCompatActivity {
             }
         });
 
-//        promptInfo = new BiometricPrompt.PromptInfo.Builder()
-//                .setTitle("Biometric login for CrypDoc")
-//                .setSubtitle("Log in using your biometric credential")
-//                .setNegativeButtonText("Use account password")
-//                .build();
-//
-//        biometricPrompt.authenticate(promptInfo);
+        promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                .setTitle("Biometric login for CrypDoc")
+                .setSubtitle("Log in using your biometric credential")
+                .setNegativeButtonText("Use account password")
+                .build();
 
-        startActivity(new Intent(StartupActivity.this, MainActivity.class));
-        finish();
-    }
+        biometricPrompt.authenticate(promptInfo);
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-//        biometricPrompt.authenticate(promptInfo);
+//        startActivity(new Intent(StartupActivity.this, MainActivity.class));
+//        finish();
     }
 }

@@ -1,0 +1,7 @@
+adb shell bmgr backupnow sanatoverhere.crypdoc
+
+adb shell bmgr fullbackup sanatoverhere.crypdoc
+
+adb shell dumpsys backup
+
+adb shell bmgr restore <TOKEN> sanatoverhere.crypdoc
